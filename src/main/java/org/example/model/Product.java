@@ -13,4 +13,5 @@ public class Product {
     private String productName;
     private String productDescription;
     private Double productPrice;
+    private String imageUrl;
 }
