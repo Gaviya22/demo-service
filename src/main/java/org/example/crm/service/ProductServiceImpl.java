@@ -1,6 +1,6 @@
-package org.example.service;
+package org.example.crm.service;
 
-import org.example.model.Product;
+import org.example.crm.model.Product;
 
 import java.util.Arrays;
 import java.util.List;
