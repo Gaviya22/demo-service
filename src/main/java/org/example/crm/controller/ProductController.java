@@ -2,9 +2,7 @@ package org.example.crm.controller;
 
 import org.example.crm.model.Product;
 import org.example.crm.service.ProductServiceImpl;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -12,9 +10,19 @@ import java.util.List;
 @CrossOrigin
 public class ProductController {
 
-    @GetMapping("/get-products")
+    ProductServiceImpl service;
+
+    ProductController(ProductServiceImpl service){
+        this.service = service;
+    }
+
+    @GetMapping("/product/all")
     List<Product> getProduct(){
-        ProductServiceImpl service = new ProductServiceImpl();
         return service.getProductList();
+    }
+
+    @PostMapping("/product/create")
+    void createProduct(@RequestBody Product product){
+        System.out.println(product);
     }
 }
