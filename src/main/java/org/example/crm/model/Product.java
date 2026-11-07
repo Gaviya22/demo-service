@@ -14,4 +14,5 @@ public class Product {
     private String productDescription;
     private Double productPrice;
     private String imageUrl;
+    private boolean isActive;
 }
